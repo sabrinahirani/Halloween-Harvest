@@ -1,0 +1,69 @@
+@startuml
+class Player {
+  -costume: Costume
+  -killCount: int
+  -friendScore: int
+  -candyCount: int
+  -inventory: ArrayList<Costume>
+  - nextHandler: Handler
+  
+  + move()
+  + viewStatistics()
+  + showInventory()
+  + handleRequest(String)
+  + setNextHandler(handler: Handler)
+}
+
+interface Handler {
+  + setNextHandler(handler: Handler)
+  + handleRequest(String)
+}
+
+class NPC {
+  -name
+  -mapPosition
+  -possibleDialogue
+  
+  + NPCTalk()
+  + NPCDoneTalk()
+  + NPCAct()
+  + NPCFight()
+  + handleRequest(String)
+  + setNextHandler(handler: Handler)
+}
+
+class CombatView {
+  -playerHealth: int
+  -NPCHealth: int
+  -NPCDescription: String
+  
+  + attackNPC()
+  + hitByNPC()
+  + combatResult()
+  + handleRequest(String)
+  + setNextHandler(handler: Handler)
+}
+
+class Driver {
+  {static} - instance: Driver
+  - Driver()
+  {static} + Driver getInstance()
+  + player: Player
+  + map: HashMap<Integer, Neighbourhood>
+  + builder(): INeighbourhoodBuilder
+  + setOnMouseClicked(action: EventHandler<MouseEvent>)
+  + setOnMousePressed(action: EventHandler<MouseEvent>)
+  + setOnMouseReleased(action: EventHandler<MouseEvent>)
+  + setOnMouseDragged(action: EventHandler<MouseEvent>)
+  + setOnKeyPressed(action: EventHandler<KeyEvent>)
+  + setOnKeyReleased(action: EventHandler<KeyEvent>)
+  + readData()
+}
+
+Handler --> Handler
+Driver .. Handler
+Handler <|.. Player : " Move input"
+Handler <|.. NPC : " NPC interaction"
+Handler <|.. CombatView : "Fighting an NPC"
+
+@enduml

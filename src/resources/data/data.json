@@ -1,0 +1,460 @@
+{
+    "neighbourhoods": [
+        {
+            "id": 0,
+            "name": "Macabre Manor",
+            "background": "100.jpg",
+            "costume": [0],
+            "npc" : [0],
+            "path": [
+                {
+                    "id": 1,
+                    "direction": "down"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Ghostly Glades",
+            "background": "101.jpg",
+            "costume": [3],
+            "npc" : [],
+            "path": [
+                {
+                    "id": 0,
+                    "direction": "up"
+                },
+                {
+                    "id": 2,
+                    "direction": "left"
+                },
+                {
+                    "id": 3,
+                    "direction": "right"
+                },
+                {
+                    "id": 4,
+                    "direction": "down"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Spectre Square",
+            "background": "102.jpg",
+            "costume": [1],
+            "npc" : [2],
+            "path": [
+                {
+                    "id": 0,
+                    "direction": "up"
+                },
+                {
+                    "id": 5,
+                    "direction": "left"
+                },
+                {
+                    "id": 1,
+                    "direction": "right"
+                },
+                {
+                    "id": 4,
+                    "direction": "down"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Cobweb Court",
+            "background": "103.jpg",
+            "costume": [4],
+            "npc" : [3],
+            "path": [
+                {
+                    "id": 0,
+                    "direction": "up"
+                },
+                {
+                    "id": 1,
+                    "direction": "left"
+                },
+                {
+                    "id": 6,
+                    "direction": "right"
+                },
+                {
+                    "id": 4,
+                    "direction": "down"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Tombstone Terrace",
+            "background": "104.jpg",
+            "costume": [6],
+            "npc" : [1],
+            "path": [
+                {
+                    "id": 1,
+                    "direction": "up"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Shadowy Shores",
+            "background": "105.jpg",
+            "costume": [7],
+            "npc" : [4],
+            "path": [
+                {
+                    "id": 2,
+                    "direction": "right"
+                },
+                {
+                    "id": 7,
+                    "direction": "down"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Pumpkin Hallow",
+            "background": "106.jpg",
+            "costume": [5],
+            "npc" : [],
+            "path": [
+                {
+                    "id": 3,
+                    "direction": "left"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Phantom Falls",
+            "background": "107.jpg",
+            "costume": [2, 8],
+            "npc" : [5],
+            "path": [
+                {
+                    "id": 5,
+                    "direction": "up"
+                }
+            ]
+        }
+    ],
+
+    "costume": [
+        {
+            "id": 0,
+            "name": "Ghost",
+            "type": "UNDEAD",
+            "description": "low budget + last minute — a white blanket!",
+            "image": "/resources/sprites/costumes/ghost.png",
+            "combat": [1.5, 1.2, 6],
+            "attacks": [0, 1]
+        },
+        {
+            "id": 1,
+            "name": "Zombie",
+            "type": "UNDEAD",
+            "description": "A tattered and blood-stained zombie costume, complete with makeup",
+            "image": "/resources/sprites/costumes/zombie.png",
+            "combat": [2.5, 1.7, 18],
+            "attacks": [0, 1, 5]
+        },
+        {
+            "id": 2,
+            "name": "Frankenstein",
+            "type": "UNDEAD",
+            "description": "A bolt-necked, stitched together mismatched patches and painted stitches, however, the real monster was the doctor",
+            "image": "/resources/sprites/costumes/zombie.png",
+            "combat": [4, 2.2, 30],
+            "attacks": [4, 6, 11]
+        },
+        {
+            "id": 3,
+            "name": "Goblin",
+            "type": "FIEND",
+            "description": "Tattered fabric, green paint, pointy ears, and your trusty burlap sack",
+            "image": "/resources/sprites/costumes/goblin.png",
+            "combat": [1.5, 1.2, 6],
+            "attacks": [5, 6]
+        },
+        {
+            "id": 4,
+            "name": "Witch",
+            "type": "FIEND",
+            "description": "A black cloak, pointy hat, bottles of potions, and the best broom money can buy",
+            "image": "/resources/sprites/costumes/vampire.png",
+            "combat": [2.5, 1.7, 18],
+            "attacks": [6, 7, 1]
+        },
+        {
+            "id": 5,
+            "name": "Merlin",
+            "type": "FIEND",
+            "description": "A long robe with magical symbols and a majestic staff, embodying the essence of arcane wisdom",
+            "image": "/resources/sprites/costumes/vampire.png",
+            "combat": [4, 2.2, 30],
+            "attacks": [9, 2, 13]
+        },
+        {
+            "id": 6,
+            "name": "Vampire",
+            "type": "BEAST",
+            "description": "Vampire teeth and a black cape, a basic but timeless costume",
+            "image": "/resources/sprites/costumes/vampire.png",
+            "combat": [1.5, 1.2, 6],
+            "attacks": [12, 10, 11]
+        },
+        {
+            "id": 7,
+            "name": "Werewolf",
+            "type": "BEAST",
+            "description": "Realistic fur and menacing claws, only a trained professional can tell you're not really a werewolf on the loose",
+            "image": "/resources/sprites/costumes/werewolf.png",
+            "combat": [2.5, 1.7, 18],
+            "attacks": [12, 11, 7]
+        },
+        {
+            "id": 8,
+            "name": "Dracula",
+            "type": "BEAST",
+            "description": "Not another ordinary vampire, but a costume with class and mesmerizing charm that only the vampire lord had",
+            "image": "/resources/sprites/costumes/vampire.png",
+            "combat": [4, 2.2, 30],
+            "attacks": [14, 8, 3]
+        },
+        {
+            "id": 9,
+            "name": "Spiderman",
+            "type": "*",
+            "description": "An officially licensed costume of everyone's favourite superhero",
+            "image": "/resources/sprites/costumes/spiderman.png",
+            "combat": [10000, 3, 10000],
+            "attacks": [4, 9, 14]
+        }
+    ],
+
+    "npc": [
+        {
+            "id": 0,
+            "name": "Casper The Ghost",
+            "type": "UNDEAD",
+            "image": "",
+            "prompt": "shy",
+            "combat": [50, 4],
+            "favourite": [],
+            "hate": [],
+            "attacks": [0]
+        },
+        {
+            "id": 1,
+            "name": "Bill The Skeleton",
+            "type": "UNDEAD",
+            "image": "",
+            "prompt": "jolly",
+            "combat": [80, 17],
+            "favourite": [],
+            "hate": [],
+            "attacks": [0, 1]
+        },
+        {
+            "id": 2,
+            "name": "Rowan The Witch",
+            "type": "FIEND",
+            "image": "/resources/sprites/npc/npc_rowan.png",
+            "prompt": "nefarious",
+            "combat": [60, 2],
+            "favourite": [],
+            "hate": [],
+            "attacks": [5, 6]
+        },
+        {
+            "id": 3,
+            "name": "Reginald William Bartholomew II: Earl Of Evermourne",
+            "type": "FIEND",
+            "image": "",
+            "prompt": "arrogant, sophisticated",
+            "combat": [20, 45],
+            "favourite": [],
+            "attacks": [7, 8]
+        },
+        {
+            "id": 4,
+            "name": "Sam The Vampire",
+            "type": "BEAST",
+            "image": "/resources/sprites/npc/npc_sam.png",
+            "prompt": "chill",
+            "combat": [40, 8],
+            "favourite": [],
+            "hate": [],
+            "attacks": [8, 9]
+        },
+        {
+            "id": 5,
+            "name": "Lily The Demon",
+            "type": "BEAST",
+            "image": "/resources/sprites/npc/npc_lily.png",
+            "prompt": "curious, innocent",
+            "combat": [100, 15],
+            "favourite": [],
+            "hate": [],
+            "attacks": [13, 14]
+        }
+    ],
+
+    "attack": [
+        {
+            "id": 0,
+            "name": "Spook",
+            "type": "UNDEAD",
+            "description": "Boo! Get Spooked!",
+            "which": "0",
+            "atk": "7"
+        }, 
+        {
+            "id": 1,
+            "name": "Haunt",
+            "type": "UNDEAD",
+            "description": "Feel the chill of lingering spirits as your nightmares weave into reality.",
+            "which": "0",
+            "atk": "12"
+        }, 
+        {
+            "id": 2,
+            "name": "Reap",
+            "type": "UNDEAD",
+            "description": "The time has come to reap what hath been sown...",
+            "which": "0",
+            "atk": "42"
+        }, 
+        {
+            "id": 3,
+            "name": "Harvest",
+            "type": "UNDEAD",
+            "description": "Surrender to the harvest of despair",
+            "which": "0",
+            "atk": "72"
+        }, 
+        {
+            "id": 4,
+            "name": "Samsara",
+            "type": "UNDEAD",
+            "description": "Embrace the eternal dance of life and death",
+            "which": "0",
+            "atk": "97"
+        }, 
+        {
+            "id": 5,
+            "name": "Bite",
+            "type": "FIEND",
+            "description": "Chomp! With a feral snarl, a chunk of flesh has been removed.",
+            "which": "0",
+            "atk": "40"
+        }, 
+        {
+            "id": 6,
+            "name": "Cackle",
+            "type": "FIEND",
+            "description": "Chaos is unleashing with every wicked sound",
+            "which": "0",
+            "atk": "15"
+        }, 
+        {
+            "id": 7,
+            "name": "Slap",
+            "type": "FIEND",
+            "description": "A simple but formidable slap gives you a lesson in hand-to-face diplomacy",
+            "which": "0",
+            "atk": "39"
+        }, 
+        {
+            "id": 8,
+            "name": "Strike",
+            "type": "FIEND",
+            "description": "With precision and focus, a swift and unstoppable strike",
+            "which": "0",
+            "atk": "79"
+        }, 
+        {
+            "id": 9,
+            "name": "Soul Drain",
+            "type": "FIEND",
+            "description": "Feel your life essence slipping as you loose blood ",
+            "which": "0",
+            "atk": "90"
+        }, 
+        {
+            "id": 10,
+            "name": "Growl",
+            "type": "BEAST",
+            "description": "A menacing growl, signaling an imminent attack! Brace yourself!",
+            "which": "0",
+            "atk": "10"
+        }, 
+        {
+            "id": 11,
+            "name": "Punch",
+            "type": "BEAST",
+            "description": "Feel the force of my fist",
+            "which": "0",
+            "atk": "22"
+        }, 
+        {
+            "id": 12,
+            "name": "Pounce",
+            "type": "BEAST",
+            "description": "Hearing some rustling, pow! Out of nowhere you get attacked!",
+            "which": "0",
+            "atk": "49"
+        }, 
+        {
+            "id": 13,
+            "name": "Fireball",
+            "type": "BEAST",
+            "description": "Embrace the warmth, the heat and the inferno! Fireball, ignite",
+            "which": "0",
+            "atk": "63"
+        }, 
+        {
+            "id": 14,
+            "name": "Mind Blast",
+            "type": "BEAST",
+            "description": "Feel the true power of consciousness",
+            "which": "0",
+            "atk": "93"
+        }
+
+    ],
+
+    "item": [
+        {
+            "id": 0,
+            "name": ""
+        },
+        {
+            "id": 1,
+            "name": ""
+        },
+        {
+            "id": 2,
+            "name": ""
+        },
+        {
+            "id": 3,
+            "name": ""
+        },
+        {
+            "id": 4,
+            "name": ""
+        }
+    ],
+
+    "event": [
+
+    ]
+}

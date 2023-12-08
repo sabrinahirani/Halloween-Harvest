@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Eight Bit Dragon';
+    src: url('../fonts/EightBitDragon-anqx.ttf');
+}
+
+#npc_name {
+    -fx-font-family: 'Eight Bit Dragon';
+    -fx-font-size: 16;
+}
+
+#npc_health {
+    -fx-font-family: 'Eight Bit Dragon';
+    -fx-font-size: 12;
+}
+
+#npc_dialogue {
+     -fx-font-family: 'Eight Bit Dragon';
+     -fx-font-size: 16;
+ }
+
+#player_health {
+    -fx-font-family: 'Eight Bit Dragon';
+    -fx-font-size: 24;
+}
+
+#soulja_boy {
+    -fx-font-family: 'Eight Bit Dragon';
+    -fx-font-size: 24;
+}
+
+#attack_button {
+    -fx-font-family: 'Eight Bit Dragon';
+    -fx-font-size: 24;
+    -fx-text-fill: white;
+}
+
+#attack_button:hover {
+    -fx-font-size: 26;
+    -fx-text-fill: yellow;
+}
+
+#command_attack:hover {
+    -fx-background-color: #ffcf4d;
+}
+
+#command_items:hover {
+    -fx-background-color: #ffcf4d;
+}
+
+#command_flee:hover {
+    -fx-background-color: #ffcf4d;
+}
+
+#command_back:hover {
+     -fx-background-color: #ffcf4d;
+     -fx-background-radius: 2;
+ }
+
+#end_text {
+     -fx-font-family: 'Eight Bit Dragon';
+     -fx-font-size: 24;
+     -fx-text-fill: white;
+ }
+
+.button {
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}

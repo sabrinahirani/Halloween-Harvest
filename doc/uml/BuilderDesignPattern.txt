@@ -1,0 +1,52 @@
+@startuml BuilderDesignPattern
+
+class Driver {
+  {static} - instance: Driver
+  - Driver()
+  {static} + Driver getInstance()
+  + player: Player
+  + map: HashMap<Integer, Neighbourhood>
+  + builder(): INeighbourhoodBuilder
+  + setOnMouseClicked(action: EventHandler<MouseEvent>)
+  + setOnMousePressed(action: EventHandler<MouseEvent>)
+  + setOnMouseReleased(action: EventHandler<MouseEvent>)
+  + setOnMouseDragged(action: EventHandler<MouseEvent>)
+  + setOnKeyPressed(action: EventHandler<KeyEvent>)
+  + setOnKeyReleased(action: EventHandler<KeyEvent>)
+  + readData()
+}
+
+class Neighbourhood {
+  - id: int
+  - name: String
+  - description: String
+  - background: String
+  - setNPC: HashSet<NPC>
+  - setCostume: HashSet<Costume>
+  + getId(): int
+  + getName(): String
+  + getDescription(): String
+  + getBackground(): String
+  + getNPCs() :HashSet<NPC>
+  + getCostumes() :HashSet<Costume>
+}
+
+interface INeighbourhoodBuilder {
+  {abstract} + readNPC(reader: BufferedReader): NPC
+  {abstract} + readCostume(reader: BufferedReader): Costume
+  {abstract} + build(reader: BufferedReader): Neighbourhood
+}
+
+class NeighbourhoodBuilder {
+  - neighbourhood: Neighbourhood
+  {abstract} + readNPC(reader: BufferedReader): NPC
+  {abstract} + readCostume(reader: BufferedReader): Costume
+  + build(reader: BufferedReader): Neighbourhood
+}
+
+Driver o-- INeighbourhoodBuilder
+INeighbourhoodBuilder <|.. NeighbourhoodBuilder :Implements
+NeighbourhoodBuilder ..> Neighbourhood :Builds
+Neighbourhood --o Driver
+
+@enduml
